@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+    <script src="./prueba.js" defer></script>
+</head>
+
+<body>
+    <h1>Contacto</h1>
+    <!-- <form method="GET" action="./submit.html"> -->
+    <form method="GET" action="#">
+        <h3>Datos personales:</h3>
+
+        <div class="input-group">
+            <label for="name">Nombres</label>
+            <input type="text" name="name" id="name" />
+        </div>
+
+        <div class="input-group">
+            <label for="surname">Apellido</label>
+            <input type="text" name="surname" id="surname" />
+        </div>
+
+        <h3>Contacto</h3>
+
+        <div class="input-group-email">
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <input type="button" id="addEmail" value="Agregar otro" />
+        </div>
+
+        <div class="input-group-phone">
+
+            <div class="input-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" name="phone" id="phone" />
+            </div>
+
+            <input type="button" id="addPhone" value="Agregar otro" />
+        </div>
+
+        <input type="submit" value="Enviar">
+
+        <button id="pruebaArt">Probar Evento</button>
+    </form>
+</body>
+
+</html>
