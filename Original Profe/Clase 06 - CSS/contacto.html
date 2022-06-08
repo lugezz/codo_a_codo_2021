@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./perfil.html">Perfil</a>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <div>
+          <label for="fullname">Nombre completo:</label>
+          <input type="text" id="fullname" required />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+        <div>
+          <p>Dejanos tu comentario:</p>
+          <textarea
+            name="comment"
+            id="comment"
+            cols="30"
+            rows="10"
+            placeholder="Escribe aquí tu comentario..."
+          ></textarea>
+        </div>
+        <div>
+          <p>Qué movilidad tiene:</p>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Moto" />
+          <label for="vehicle1">Moto</label><br />
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Auto" />
+          <label for="vehicle2">Auto</label><br />
+          <input
+            type="checkbox"
+            id="vehicle3"
+            name="vehicle3"
+            value="Bicicleta"
+          />
+          <label for="vehicle3">Bicicleta</label>
+        </div>
+        <div>
+          <p>En qué lenguaje programa:</p>
+          <input type="radio" name="lenguaje" id="java" />
+          <label for="java">Java</label>
+          <br />
+          <input type="radio" name="lenguaje" id="javascript" />
+          <label for="javascript">JavaScript</label>
+          <br />
+          <input type="radio" name="lenguaje" id="python" checked />
+          <label for="python">Python</label>
+        </div>
+        <div>
+          <p>Mayoría de edad:</p>
+          <select name="edad" id="edad">
+            <option value="mayor">Mayor de 18</option>
+            <option value="menor">Menor de 18</option>
+          </select>
+        </div>
+
+        <!-- <input type="date" name="" id="" >
+
+        <input type="number" name="" id="">
+
+        <input type="color" name="" id="">
+
+        <input type="file" name="" id="">
+
+        <input type="password" name="" id=""> -->
+
+        <br />
+
+        <button type="submit">Enviar</button>
+        <input type="reset" value="Reiniciar" />
+      </form>
+    </main>
+  </body>
+</html>

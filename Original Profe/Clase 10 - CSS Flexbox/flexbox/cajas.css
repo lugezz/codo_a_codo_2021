@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  /* width: 1000px; */
+  height: 500px;
+  background-color: antiquewhite;
+  display: flex;
+
+  /* Define el main axis y cross axis */
+  flex-direction: row; /* row */
+
+  /* Mainaxis - Eje principal */
+  justify-content: flex-start; /* flex-start */
+
+  /* Cross axis - Eje secundario */
+  align-items: center; /* stretch */
+
+  /* Ocupar más de 1 linea */
+  flex-wrap: wrap; /* nowrap */
+
+  /* Definir la posición cuando tengo más de 1 línea */
+  align-content: space-between;
+}
+
+/* .box1, .box5 {
+  width: 100% !important;
+} */
+
+.box3 {
+  /* Agranda el elemento según el espacio disponible */
+  flex-grow: 1; /* 0 */
+
+  /* Habilita o deshabilita que el elemento se encoja  */
+  flex-shrink: 0; /* 1 */
+
+  align-self: inherit; /* flex-start */
+}
+
+.box4 {
+  flex-grow: 10; /* 0 */
+}
+
+/* .box3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* FLEX ITEM */
+.box {
+  background-color: indianred;
+  height: 100px;
+  width: 100px;
+  margin: 1rem;
+  font-size: 3rem;
+}

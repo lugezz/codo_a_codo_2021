@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  height: 300vh;
+}
+
+.relative {
+  position: relative;
+}
+
+div {
+  background-color: cornflowerblue;
+  height: 300px;
+  padding: 2rem;
+  width: 33%;
+}
+
+div:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+p {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.parrafo1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.parrafo2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.parrafo3 {
+  position: fixed;
+}
+
+.parrafo4 {
+  position: relative;
+  bottom: -100px;
+}
+
+div:last-of-type {
+  position: sticky;
+  top: 0;
+}
+
+div:nth-child(4) {
+  /* background-color: red; */
+  /* position: fixed; */
+  bottom: 50px;
+  right: 50px;
+}

@@ -1,0 +1,41 @@
+ul {
+  /* list-style-type: armenian; */
+  /* list-style-type: none; */
+  /* position: relative; */
+  /* padding-left: 1rem; */
+}
+
+/* ul::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100px;
+  box-shadow: -1px 0 1px 0 rgb(255, 0, 0), -2px 0 1px 0 rgb(0, 255, 0);
+  top: 0;
+  left: 0;
+} */
+
+li {
+  /* position: relative; */
+}
+
+/* li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  background: center no-repeat url("./assets/icons/atom.svg");
+  left: -13px;
+} */
+
+/* li::marker {
+  color: transparent;
+} */
+
+/*? CSS @supports - Para CSS properties no soportadas por todos los browsers  */
+/* @supports (list-style-type: symbols(cyclic "*" "†" "‡")) {
+  ul {
+    list-style-type: symbols(cyclic "*" "†" "‡");
+  }
+} */

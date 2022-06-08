@@ -1,0 +1,35 @@
+/*? Recuerden que pueden aplicar este valor por defecto a todos los elementos.  */
+/* * {
+  box-sizing: border-box;
+} */
+
+div {
+  background-color: gray;
+  border: 20px solid red;
+  color: white;
+  display: grid;
+  height: 500px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 20px;
+  place-items: center;
+  text-align: center;
+  width: 500px;
+}
+
+div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/*? Dimensiones: contenido + padding + border */
+/*? Dimensiones:   500px   +   40px  +  40px */
+div.contentBox {
+  box-sizing: content-box; /* Default */
+}
+
+/*? Dimensiones: contenido + padding + border */
+/*? Dimensiones:   440px   +   40px  +  40px */
+div.borderBox {
+  box-sizing: border-box;
+}

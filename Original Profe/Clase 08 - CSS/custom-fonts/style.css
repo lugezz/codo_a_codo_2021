@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Besley";
+  src: url(./Besley.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+p:hover {
+  font-family: "Lato", sans-serif;
+}
+
+p:nth-child(2) {
+  font-family: "Besley", sans-serif;
+}

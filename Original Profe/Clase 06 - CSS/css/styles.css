@@ -1,0 +1,52 @@
+/*? Estilos generales */
+* {
+  outline: 1px solid black;
+}
+
+body {
+  /* font-size: 75px; */
+  font-family: sans-serif;
+  /* margin-top: 100px; */
+}
+
+/*? Encabezado */
+.green {
+  color: green;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+.special {
+  font-weight: bold;
+}
+
+/* Se lee: elemento 'a' con clase 'special' */
+a.special {
+  border-right: 5px solid orange;
+}
+
+/*? Principal */
+h1, p {
+  text-decoration: underline;
+}
+
+h1 {
+  display: block;
+  color: red;
+  font-size: 75px;
+  outline: none;
+}
+
+p {
+  color: blue;
+}
+
+.letraInicial {
+  font-style: italic;
+  color: black;
+  font-size: 40px;
+}
+
+/*? Footer */
