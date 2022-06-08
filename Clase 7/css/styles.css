@@ -1,0 +1,24 @@
+* {
+    font-size: 1.5rem;
+    /* box-sizing: border-box; */
+}
+
+.container{
+    background-color: coral;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 300px;
+    padding-top: 1rem;
+}
+
+.subcontainer{
+    border: 5px solid black;
+    border-right: 4px solid green;
+    border-left: 10px solid red;
+    margin: auto;
+    background-color: cornflowerblue;
+    height: 180px;
+    padding: 20px;
+    width: 180px;
+}

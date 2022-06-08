@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /* Mala práctica, pero para que veamos que tiene prioridad */
+        h1 {
+            color: green;            
+        }
+
+        a {
+            color: cyan;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a class="special" href="./perfil.html">Perfil</a>
+            <!-- Estilo en linea con mayor prioridad, pero muy mala práctica -->
+            <a style="color: blue" href="./contacto.html">Contacto</a>
+            <a class="link_prueba">Prueba</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Mi Página personal</h1>
+        <h2 id="h2_titulo">Esto es lo que podés conocer</h2>
+        <div style="width: 350px">
+            <img style="width: 100%; max-height: 100%;" src="https://picsum.photos/id/1/300/200" alt="">
+        </div>
+        <div style="width: 350px">
+            <h5 style="text-align: center;">Un Oso en la montaña</h5>
+            <img src="https://picsum.photos/id/1020/300/200" alt="">
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ToW0Gtig9Aw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </main>
+    <footer>
+        &copy;2021 Codo a <span class="d_green">Codo</span>
+    </footer>
+</body>
+</html>

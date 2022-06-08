@@ -1,0 +1,53 @@
+/* Estilos Generales */
+* {
+    outline: 1px solid black;
+}
+
+body {
+    margin-top: 100px;
+    font-family: sans-serif;
+}
+
+/* Encabezados */
+
+/* Si hubiera otro bloque h1 antes no se ejecutaría */
+h1 {
+    display: block;
+    color: red;
+    font-size: 35px;
+}
+
+h1, p {
+    text-decoration: underline;
+}
+
+#h2_titulo {
+    color:red;
+}
+
+/* Cuerpo */
+p {
+    color: blue;
+}
+
+ul {
+    display: inline;
+}
+
+.link_prueba {
+    color:darkmagenta;
+}
+
+.d_green {
+    color: green;
+}
+
+.special {
+    font-weight: bold;
+}
+
+a.special {
+    border-right: 5px solid orange;
+}
+
+/* Footer */

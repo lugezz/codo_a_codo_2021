@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=".">Home</a></li>
+                <li><a href="./perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <div>
+                <label for="fullname">Nombre Completo:</label>
+                <input type="text" id="fullname" required>
+            </div>
+
+            <div>
+                <label for="mail">Mail:</label>
+                <input type="text" id="mail" required>
+            </div>
+
+            <div>
+                <p>Dejanos tu comentario</p>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Escribe aquí tu comentario"></textarea>
+            </div>
+
+            <div>
+                <p>Que movilidad tenés:</p>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">Moto</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2">Auto</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3">Bicicleta</label><br>
+            </div>
+
+            <div>
+                <p>En qué lenguaje programás:</p>
+                <input type="radio" name="lenguaje" id="java">
+                <label for="java">Java</label>
+                <br>
+                <input type="radio" name="lenguaje" id="javascript">
+                <label for="javascript">Java</label>
+                <br>
+                <input type="radio" name="lenguaje" id="python" checked="False">
+                <label for="java">Python</label>
+            </div>
+
+            <select name="edad" id="edad">
+                <option value="mayor">Mayor de 18</option>
+                <option value="menor">Menor de 18</option>
+            </select>
+
+            <br>
+
+<!--             <input type="date" name="" id="">
+            <input type="number" name="" id="">
+            <input type="color" name="" id="">
+            <input type="file" name="" id="">
+            <input type="password" name="" id=""> -->
+
+            <br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>   
+
+    <h3>Contactos</h3>
+    <a href="mailto:mimailpulenta@gmail.com">Mail Artime Vázquez</a>
+
+    <br>
+    <a href="#top">Volver arriba</a>
+
+</body>
+</html>

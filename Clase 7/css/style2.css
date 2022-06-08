@@ -1,0 +1,89 @@
+
+* {
+    font-size: 1.5rem;    
+}
+
+div p {
+    color: red;
+}
+
+div > p {
+    /* Hijo directo */
+    color:blue;
+}
+
+h5 ~ p {
+    color: chartreuse;
+}
+
+div .verde {
+    /* dejando el espacio, clase verde pero que sea hijo del div */
+    color: green;
+    font-style: italic;
+    outline: 5px solid green;
+}
+
+div.verde {
+    /* sin dejar el espacio, div cuya clase sea verde */
+    color: green;
+    font-weight: bold;
+    outline: 5px solid red;
+}
+
+p+p {
+    color: yellow;
+}
+
+.textoGrande {
+    font-size: 20px;
+}
+
+.textoPocoMasGrande {
+    font-size: 2em;
+}
+
+.textoGrande>p, .textoPocoMasGrande>p  {
+    font-size: 1.5em;
+}
+
+h5+p {
+    color: violet;
+}
+
+h5 {
+    color: #000000; /* Negro */
+    color: #cc7676; /* Manual */
+    color: #0000FF; /* Azul */
+    color: #00FF00; /* Verde */
+    color: #FF0000; /* Rojo */
+    /* Color Hexadecimal los 2 primeros Rojo, el segundo Verde, y el último azul (RGB) */
+    color: #FF00FF; /* Violeta */
+}
+
+#color1 {
+    color: rgb(0, 255, 0) /* Verde */
+}
+
+#color2 {
+    color: rgb(255, 0, 0) /* Rojo */
+}
+
+#color3 {
+    color: rgb(0, 0, 255) /* Rojo */
+}
+
+#color4 {
+    color: rgb(255, 255, 255) /* Blanco */
+}
+
+#color5 {
+    color: rgb(0, 0, 0) /* Negro */
+}
+
+h3 {
+    color:hsl(90, 40, 33); /* tono, saturación y luz en color */
+}
+.parrafoverde{
+    color: green;
+}
+

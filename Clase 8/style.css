@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: "Ubuntu Regular";
+    src: url(./Ubuntu-Regular.ttf);
+}
+
+:root {
+    --multiplier: 3;
+    --primary: rgb(2, 2, 2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: beige;
+/*     display: grid;
+    place-items: center; */
+}
+
+a.test {
+    overflow: visible;
+    background-color: red;
+    border-radius: 8px;
+    /* border: 8px solid green; */
+    border-style: none;
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-family: 'Montserrat';
+    font-size: calc(1rem * var(--multiplier));
+    font-weight: 900;
+    /* padding-block: 1rem;
+    padding-inline: 1rem; */
+    height: calc(50px * var(--multiplier));
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: calc(190px * var(--multiplier));
+}
+
+/* a:hover {
+    background-color: hsl(0, 100%, 95%);
+    box-shadow: 0 0 0 5px red;
+    color: violet;
+} */
+
+input[type="checkbox"] {
+    /* appearance: none; */
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+}
+
+input[type="checkbox"]:checked {
+    background-color: green;
+    outline: 5px solid red;
+}
+
+*:focus {
+    outline: 5px solid blue;
+}
+
+input[type="checkbox"]:nth-child(2) { /* fist-child es el a */
+    outline: 5px solid violet;
+} 
+
+li:only-child {
+    background-color: yellow;
+}
+
+div:nth-child(1){
+    display: none;
+}
+
+div p {
+    font-size: 2rem;
+    color:red;
+}
+
+.articulo1 p.mitad {
+    text-align: center;
+    width: 50%;
+    color: violet;
+}
+
+.caja {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    margin: 0 auto;
+    position: relative;
+}
+
+.caja a {
+    background-color:orangered;
+    width: 55px;
+    height: 55px;
+    display: block;
+    font-size: 2rem;
+}
+
+.caja a.primero {
+    background-color: greenyellow;
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    left: 600px;
+}

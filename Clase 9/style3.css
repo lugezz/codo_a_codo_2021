@@ -1,0 +1,44 @@
+
+ul {
+    list-style-type: armenian;
+    list-style-type: none; /* lo saco */
+    position: relative;
+    padding-left: 1rem;
+}
+
+ul::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100px;
+    box-shadow: -1px 0 1px 0 red, -2px 0 1px 0 green;
+    top: 0;
+    left: 0;
+}
+
+li {
+    position: relative;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    display: inline-block; /* para que pueda estar al lado */
+    width: 8px;
+    height: 100%;
+    background: center no-repeat url("./assets/icons/atom.svg");
+    left: -13px;
+}
+
+
+
+/* ? CSS @supports - Para CSS properties no soportadas por todos los browsers, 
+por ejemplo symbols sólo compatible Firefox  
+Otra solución es poner las 2 propiedades consecutivas y cada navegador va a usar la que sea
+compatible de atrás para adelante
+*/
+@supports (list-style-type: symbols(cyclic "*" "†" "‡")) {
+  ul {
+    list-style-type: symbols(cyclic "*" "†" "‡");
+  }
+} 

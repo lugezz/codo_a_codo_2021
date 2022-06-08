@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "ubuntu";
+    src: url(./ubuntu.ttf);
+}
+body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+        
+}
+h1 {
+
+    font-family: "ubuntu";
+    text-shadow: -0.05em -0.05em rgb(38, 197, 150);
+    font-size: 90px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.login-page {
+    width: 330px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .form {
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff2c;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 50px;
+  }
+  .form button {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,202,236,1) 0%, rgba(0,199,142,1) 100%);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+  
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #ffffff;
+    font-size: 15px;
+    
+}
