@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --primary: rgb(68, 23, 23);
+  --secondary: blanchedalmond;
+  --accent: rgb(43, 131, 131);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-image: url("./assets/img/hero.jpg");
+  background-position: 0 -275px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.75);
+  height: 500px;
+  width: 100%;
+
+  position: relative;
+}
+
+.header__title {
+  bottom: 0;
+  color: var(--secondary);
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  padding-right: 2rem;
+
+  position: absolute;
+  right: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 2rem;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.aboutus {
+  padding: 2rem;
+}
+
+.aboutus h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.aboutus img {
+  height: 600px;
+}
+
+.aboutus p {
+  color: var(--primary);
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.15rem;
+}
+
+/* .aboutus p:hover {
+  animation: scale 0.1s ease-in-out;
+  animation-fill-mode: forwards;
+  background-color: white;
+  padding: 1rem;
+} */
+
+section {
+  overflow: hidden;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+p::first-letter {
+  color: var(--accent);
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.75rem;
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+.aboutus h2 {
+  cursor: pointer;
+}
+
+.aboutus h2:hover {
+  animation: rubberBand;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 300px;
+      }
+
+    .aboutus_textWrapper {
+        flex-direction: column;
+    }
+
+    /* .aboutus img {
+        height: 500px;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        background-position: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+    .header__title {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        background-image: none;
+        background-color: darkgrey;
+    }
+    
+    .header__title {
+        color: black;
+        padding-right: 0;
+    }
+
+    .aboutus__container {
+        flex-direction: column;
+    }
+
+    .aboutus__img {
+        max-width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+}
+
+.container {
+    background-color: antiquewhite;
+    display: flex;
+    /* Main Axis o eje principal */
+    flex-direction: row-reverse; /* Cambia el orden y lleva a la derecha */
+    flex-direction: row; 
+    justify-content: flex-end; /* Lleva a la derecha o a la izquierda si está el reverse */
+    justify-content: space-evenly; /* Si está column no se nota porque coincide con el alto del contenedor */ 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: indianred;
+    height: 100px;
+    width: 100px;
+    margin: 1rem;
+    font-size: 3rem;
+    align-content: space-between;
+}
+
+
+.box4 {
+    /* Agranda el tamaño hasta el espacio disponible. Default 0 */
+    flex-grow: 10;
+}
+
+.box3 {
+    flex-shrink: 0; /* 1 Nada, 0 no se achica. Habilita o no */
+}
