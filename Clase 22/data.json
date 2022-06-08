@@ -1,0 +1,15 @@
+{
+    "users": [{
+            "id": 1,
+            "fullname": "Juan Chemello"
+        },
+        {
+            "id": 2,
+            "fullname": "Artime Vázquez"
+        },
+        {
+            "id": 3,
+            "fullname": "Juan Cuchuflito"
+        }
+    ]
+}

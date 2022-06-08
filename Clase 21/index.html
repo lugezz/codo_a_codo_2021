@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="miDiv" v-cloak>
+        <p>{{ greetings }}</p>
+        <input id="a" type="text" v-model="greetings" @keyup.enter.once="greet">
+        <div class="box" v-if="isVisible"></div>
+        <div class="box blue" v-else-if="isVisible2"></div>
+        <div class="box red" v-else></div>
+        <!-- <div class="box" v-show="isVisible"></div> aparece en el html como display: none, el v-if no -->
+        <button @click="toggleBox">Toggle</button>
+        <login-form />
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./main.js"></script>
+    <script>
+        console.log(Vue)
+        const miApp = Vue.createApp({
+            data: function() {
+                return {
+                    greetings: "Hola Vue 3",
+                    isVisible: false,
+                    isVisible2: !true
+                }
+            },
+            methods: {
+                toggleBox() {
+                    this.isVisible = !this.isVisible;
+                },
+                greet() {
+                    this.greetings = "Hola desde input"
+                }
+            }
+        })
+        miApp.component("login-form", {
+            template: `            
+            <form @submit.prevent = "handleSubmit">
+                <h1>{{ title }}</h1>
+                <input type="email"/ v-model = "email">
+                <input type="password"/ v-model = "password">
+                <button>Login</button>
+            </form>
+            `,
+            data() {
+                return {
+                    title: "Formulario de Login",
+                    email: '',
+                    password: ''
+                }
+            },
+            methods: {
+                handleSubmit() {
+                    console.log(this.email, this.password)
+                }
+            }
+        })
+
+        miApp.mount('#miDiv')
+    </script>
+</body>
+
+</html>
