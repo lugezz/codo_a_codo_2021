@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Splendid Food</title>
+    <link rel="stylesheet" href="styles/style.min.css" />
+    <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../public/favicon.ico" type="image/ico" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="top-bar spread">
+        <nav class="top-bar-nav">
+          <a href="#" class="top-bar-link">
+            <i class="icofont-spoon-and-fork"></i>
+            <span>Home</span>
+          </a>
+          <a href="views/products.html" class="top-bar-link">
+            <span>Productos</span>
+          </a>
+          <a href="views/past-orders.html" class="top-bar-link">
+            <span>Historial de Pedidos</span>
+          </a>
+        </nav>
+        <a @click="toggleSidebar" href="#" class="top-bar-cart-link">
+          <i class="icofont-cart-alt icofont-1x"></i>
+          <span>Minicart (0)</span>
+        </a>
+      </header>
+
+      <div class="splash-container">
+        <div class="splash">
+          <h1>Granjita VUE</h1>
+        </div>
+      </div>
+
+      <main class="wrapper">
+        <h2>Recomendados</h2>
+
+        <div class="recommended">
+          <div
+            v-for="(prod, index) in inventory.slice(0, 3)"
+            key="prod.id"
+            class="card"
+          >
+            <div class="card-title">{{ prod.name }}</div>
+            <div class="card-body">
+              <i :class="`icofont-10x icofont-${prod.icon}`"></i>
+              <form>
+                <div class="row">
+                  <div class="cell">
+                    <label>Tipo:</label>
+                  </div>
+                  <div class="cell">
+                    <em>{{ prod.type }}</em>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="cell">
+                    <label>Precio:</label>
+                  </div>
+                  <div class="cell">${{ prod.price.USD }}</div>
+                </div>
+                <div class="row">
+                  <div class="cell">
+                    <label>Cantidad:</label>
+                  </div>
+                  <div class="cell">
+                    <input type="number" v-model="prod.quantity" />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <button
+                @click="addToCart(prod.name, index)"
+                class="btn btn-light"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <sidebar v-if="showSidebar" :toggle="toggleSidebar" :cart="cart" :inventory="inventory" />
+
+      <footer></footer>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            showSidebar: true,
+            inventory: [],
+            cart: {},
+          };
+        },
+        methods: {
+          addToCart(name, index) {
+            console.log(name, index);
+            // if (!this.cart[name]) this.cart[name] = 0
+            this.cart[name] ??= 0
+            this.cart[name] += this.inventory[index].quantity;
+            console.log(this.cart);
+          },
+          toggleSidebar() {
+            this.showSidebar = !this.showSidebar;
+          },
+        },
+        async mounted() {
+          const res = await fetch("./food.json");
+          const data = await res.json();
+          this.inventory = data;
+          console.log(data);
+        },
+      });
+
+      app.component("sidebar", {
+        props: ["toggle", "cart", "inventory"],
+        computed: {
+          cartTotal() {
+            return (this.cart.carrot * 4.82).toFixed(2);
+          },
+        },
+        methods: {
+          getPrice(name) {
+            const prod = this.inventory.find(p => p.name === name)
+            return prod.price.USD
+          },
+          calculateTotal() {
+            const cartEntries = Object.entries(this.cart)
+            const total = cartEntries.reduce((tot, p) => {
+              return tot + p[1] * this.getPrice(p[0])
+            }, 0)
+
+            return total
+          }
+        },
+        template: `
+          <aside class="cart-container">
+          <div class="cart">
+            <h1 class="cart-title spread">
+              <span>
+                Minicart
+                <i class="icofont-cart-alt icofont-1x"></i>
+              </span>
+              <button @click="toggle" class="cart-close">&times;</button>
+            </h1>
+
+            <div class="cart-body">
+              <table class="cart-table">
+                <thead>
+                  <tr>
+                    <th><span class="sr-only">Imágen del producto</span></th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cant</th>
+                    <th>Subt</th>
+                    <th><span class="sr-only">Acciones</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(quantity, key, i) in cart" :key="i">
+                    <td><i class="icofont-carrot icofont-3x"></i></td>
+                    <td>{{ key }}</td>
+                    <td>$ {{ getPrice(key) }}</td>
+                    <td class="center">{{ quantity }}</td>
+                    <td>\${{ (quantity * getPrice(key)).toFixed(2) }}</td>
+                    <td class="center">
+                      <button class="btn btn-light cart-remove">
+                        &times;
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p v-if="!Object.keys(cart).length" class="center"><em>Tu carrito está vacío</em></p>
+              <div class="spread">
+                <span><strong>Total:</strong> \$ {{ calculateTotal().toFixed(2) }}</span>
+                <button class="btn btn-light">Confirmar Pedido</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+        `,
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Historial de Pedidos</title>
+    <link rel="stylesheet" href="../styles/style.min.css">
+  </head>
+  <body>
+
+    <div id="app">
+
+      <header class="top-bar spread">
+        <nav class="top-bar-nav">
+          <a href="../app.html" class="top-bar-link">
+            <i class="icofont-spoon-and-fork"></i>
+            <span>Home</span>
+          </a>
+          <a href="products.html" class="top-bar-link">
+            <span>Productos</span>
+          </a>
+          <a href="past-orders.html" class="top-bar-link">
+            <span>Historial de Pedidos</span>
+          </a>
+        </nav>
+        <a href="#" class="top-bar-cart-link">
+          <i class="icofont-cart-alt icofont-1x"></i>
+          <span>Minicart (0)</span>
+        </a>
+      </header>
+
+      <main class="wrapper">
+        <h1>Historial de Pedidos</h1>
+
+        <table class="product-table">
+          <thead>
+            <tr>
+              <td><span class="sr-only">Imágen de producto</span></td>
+              <td>Producto</td>
+              <td>Precio</td>
+              <td>Cantidad</td>
+              <td>Total</td>
+              <td><span class="sr-only">Acciones</span></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="icofont-carrot icofont-4x"></td>
+              <td>Carrot</td>
+              <td>$1.00</td>
+              <td>1</td>
+              <td>$1.00</td>
+              <td><button class="btn btn-dark">Agregar</button></td>
+            </tr>
+            <tr>
+              <td><i class="icofont-banana icofont-4x"></td>
+              <td>Banana</td>
+              <td>$0.50</td>
+              <td>10</td>
+              <td>$5.00</td>
+              <td><button class="btn btn-dark">Agregar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+
+      <aside class="cart-container">
+        <div class="cart">
+          <h1 class="cart-title spread">
+            <span>
+              Cart
+              <i class="icofont-cart-alt icofont-1x"></i>
+            </span>
+            <button class="cart-close">&times;</button>
+          </h1>
+
+          <div class="cart-body">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th><span class="sr-only">Imágen de producto</span></th>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cant</th>
+                  <th>Subt</th>
+                  <th><span class="sr-only">Acciones</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="icofont-carrot icofont-3x"></i></td>
+                  <td>Carrot</td>
+                  <td>$1.00</td>
+                  <td class="center">1</td>
+                  <td>$1.00</td>
+                  <td class="center">
+                    <button class="btn btn-light cart-remove">
+                      &times;
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="center"><em>Tu carrito está vacíot</em></p>
+            <div class="spread">
+              <span><strong>Total:</strong> $1.00</span>
+              <button class="btn btn-light">Confirmar Pedido</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </body>
+</html>
