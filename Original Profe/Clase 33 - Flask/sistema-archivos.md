@@ -1,0 +1,15 @@
+- C:
+  - Mis Documentos
+    - Proyectos
+      - Granja-VUE
+        - python 3.8.10
+          - flask 2.x
+          - jinja 1.x
+      - Sistema-Empleados
+        - python 3.8.10
+          - django 6.x
+  - Archivos de Programa
+    - Python 3.8
+      - Modulos
+        - pip 21.x
+        - setuptools 49.x
